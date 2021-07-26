@@ -24,9 +24,6 @@ $calendar = [
     
 ];
 
-$lunghezza = count($calendar)
-var_dump ($calendar)
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +34,6 @@ var_dump ($calendar)
     <title>Document</title>
 </head>
 <body>
-    <?php for ($i=0; $i < $lunghezza ; $i++) { 
-        # code...
-    } ?>
+    
 </body>
 </html>
