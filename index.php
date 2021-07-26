@@ -24,6 +24,9 @@ $calendar = [
     
 ];
 
+$lunghezza = count($calendar);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +37,10 @@ $calendar = [
     <title>Document</title>
 </head>
 <body>
-    
+    <ul>
+    <?php for ($i=0; $i < $lunghezza ; $i++) { ?>
+        <li><?php echo $calendar[$i]['nomeC'] . ' - ' . $calendar[$i]['nomeS'] ?> <?php echo $calendar[$i]['puntiC'] . ' | ' . $calendar[$i]['puntiS'] ?></li>
+    <?php } ?>
+    </ul>
 </body>
 </html>
