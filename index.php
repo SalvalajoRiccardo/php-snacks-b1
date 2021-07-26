@@ -49,6 +49,12 @@ if (empty($_GET['eta']) || !isset($_GET['eta']) || !is_numeric($_GET['eta']) ) {
     $stringaEta = $_GET['eta'];
 }
 
+if (empty($_GET['name']) || !isset($_GET['name']) || strlen($_GET['name']) < 4 || empty($_GET['mail']) || !isset($_GET['mail']) || !strpos($_GET['mail'], '@') || !strpos($_GET['mail'], '.') || empty($_GET['eta']) || !isset($_GET['eta']) || !is_numeric($_GET['eta']) ) {
+    $stringaAccesso = 'Accesso Negato';
+} else {
+    $stringaAccesso = 'Accesso Riuscito';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,5 +77,6 @@ if (empty($_GET['eta']) || !isset($_GET['eta']) || !is_numeric($_GET['eta']) ) {
     <h3>Nome: <?php echo $stringaName; ?> </h3>
     <h3>Mail: <?php echo $stringaMail; ?> </h3>
     <h3>Età: <?php echo $stringaEta; ?> </h3>
+    <h3><?php echo $stringaAccesso; ?> </h3>
 </body>
 </html>
